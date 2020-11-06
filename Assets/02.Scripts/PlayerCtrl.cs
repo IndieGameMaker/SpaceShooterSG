@@ -20,11 +20,15 @@ public class PlayerCtrl : MonoBehaviour
     {
         h = Input.GetAxis("Horizontal"); //Left, Right Arrow, A, D    -1.0f ~ 0.0f ~ +1.0f
         v = Input.GetAxis("Vertical");   //-1.0f ~ 0.0f ~ +1.0f
+        r = Input.GetAxis("Mouse X");
         //Debug.Log("h=" + h);
-        Debug.Log($"h={h} / v={v}");
+        //Debug.Log($"h={h} / v={v}");
 
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);  //벡터 + 벡터
         transform.Translate(dir.normalized * Time.deltaTime * moveSpeed);
+
+        //(회전 기준축 * 보정 시간 * 회전 속도 * 변위)
+        transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * r);
     }
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
