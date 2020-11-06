@@ -32,7 +32,33 @@ public class PlayerCtrl : MonoBehaviour
 
         //(회전 기준축 * 보정 시간 * 회전 속도 * 변위)
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * r);
+        PlayerAnim();
     }
+
+    void PlayerAnim()
+    {
+        if (v >= 0.1f) //전진
+        {
+            anim.CrossFade("RunF", 0.25f);
+        }
+        else if (v <= -0.1f) //후진
+        {
+            anim.CrossFade("RunB", 0.25f);
+        }
+        else if (h >= 0.1f) //오른쪽
+        {
+            anim.CrossFade("RunR", 0.25f);
+        }
+        else if (h <= -0.1f) //왼쪽
+        {
+            anim.CrossFade("RunL", 0.25f);
+        }
+        else
+        {
+            anim.CrossFade("Idle", 0.25f);
+        }
+    }
+
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
         Vector3.forward = Vector3(0, 0, 1)
