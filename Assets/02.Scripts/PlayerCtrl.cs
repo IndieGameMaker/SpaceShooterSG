@@ -11,9 +11,11 @@ public class PlayerCtrl : MonoBehaviour
     public float moveSpeed = 8.0f;
     public float turnSpeed = 80.0f;
 
+    public Animation anim;
+
     void Start()
     {
-
+        anim = GetComponent<Animation>();
     }
 
     void Update()
