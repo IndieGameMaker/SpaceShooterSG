@@ -32,6 +32,8 @@ public class PlayerCtrl : MonoBehaviour
 
         //(회전 기준축 * 보정 시간 * 회전 속도 * 변위)
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * r);
+        
+        //애니메이션 실행
         PlayerAnim();
     }
 
