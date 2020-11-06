@@ -7,6 +7,8 @@ public class PlayerCtrl : MonoBehaviour
     private float h = 0.0f;
     private float v = 0.0f;
 
+    public float moveSpeed = 8.0f;
+
     void Start()
     {
 
@@ -20,8 +22,7 @@ public class PlayerCtrl : MonoBehaviour
         Debug.Log($"h={h} / v={v}");
 
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);  //벡터 + 벡터
-        transform.Translate(dir.normalized * 0.1f);
-
+        transform.Translate(dir.normalized * Time.deltaTime * moveSpeed);
     }
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
