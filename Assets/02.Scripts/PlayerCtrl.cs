@@ -19,8 +19,8 @@ public class PlayerCtrl : MonoBehaviour
         //Debug.Log("h=" + h);
         Debug.Log($"h={h} / v={v}");
 
-        //transform.position += new Vector3(0, 0, 0.1f);
-        transform.Translate(Vector3.forward * 0.1f * v); //Vector3.forward = new Vector3(0, 0, 1)
+        transform.Translate(Vector3.forward * 0.1f * v); 
+        transform.Translate(Vector3.right * 0.1f * h);
     }
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
