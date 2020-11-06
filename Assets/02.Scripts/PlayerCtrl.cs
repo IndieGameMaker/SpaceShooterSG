@@ -6,8 +6,10 @@ public class PlayerCtrl : MonoBehaviour
 {
     private float h = 0.0f;
     private float v = 0.0f;
+    private float r = 0.0f;
 
     public float moveSpeed = 8.0f;
+    public float turnSpeed = 80.0f;
 
     void Start()
     {
