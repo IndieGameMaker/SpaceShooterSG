@@ -43,6 +43,9 @@ public class FireCtrl : MonoBehaviour
         muzzleFlash.material.mainTextureOffset = offset;
         //muzzleFlash.material.SetTextureOffset("_MainTex", offset);
 
+        //MuzzleFlash 크기를 변경
+        muzzleFlash.transform.localScale = Vector3.one * Random.Range(1.0f, 3.0f);
+
         muzzleFlash.enabled = true;
         
         yield return new WaitForSeconds(0.3f);
