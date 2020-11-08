@@ -15,6 +15,7 @@ public class FireCtrl : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        muzzleFlash.enabled = false;
     }
 
     // Update is called once per frame
