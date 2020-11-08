@@ -7,6 +7,9 @@ public class FireCtrl : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePos;
 
+    public AudioSource audio;
+    public AudioClip fireSfx;
+
     void Start()
     {
         
