@@ -8,7 +8,8 @@ public class RemoveBullet : MonoBehaviour
     //Collider 컴포넌트의 Is Trigger 언체크
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == "BULLET")
+        //if (coll.gameObject.tag == "BULLET")
+        if (coll.gameObject.CompareTag("BULLET"))
         {
             Destroy(coll.gameObject);
         }
