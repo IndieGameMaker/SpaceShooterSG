@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
+    public GameObject sparkEffect;
+
     //충돌 시점에 1번 호출
     //Collider 컴포넌트의 Is Trigger 언체크
     void OnCollisionEnter(Collision coll)
@@ -11,6 +13,16 @@ public class RemoveBullet : MonoBehaviour
         //if (coll.gameObject.tag == "BULLET")
         if (coll.gameObject.CompareTag("BULLET"))
         {
+            ContactPoint[] points = coll.contacts;
+            Vector3 point = points[0].point; //충돌 지점
+            Vector3 normal = points[0].normal; //법선벡터 (Normal Vector)
+
+            //Quaterion 쿼터니언 (사원수 x, y, z, w), 각도 단위
+            //오일러회전을 할 경우 짐벌락(김벌락 , Gimbal Lock) 현상
+            Quaternion rot = Quaternion.LookRotation(normal);
+
+            Instantiate(sparkEffect, point, rot);
+
             Destroy(coll.gameObject);
         }
     }
