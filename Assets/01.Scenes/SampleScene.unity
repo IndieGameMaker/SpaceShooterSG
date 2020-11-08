@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 587effdf8a149463a9ba2a930ed271a8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.4194673, g: 0.35184097, b: 0.2861023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -474,7 +474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464034845}
-  m_LocalRotation: {x: 0.033277903, y: -1e-45, z: -0, w: 0.99944615}
+  m_LocalRotation: {x: 0.033277903, y: 0.00000003059072, z: -0.0000000010185591, w: 0.99944615}
   m_LocalPosition: {x: -0.233, y: 2.12, z: -2.373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -784,7 +784,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -0.34429157, y: -0.66122043, z: 0, w: 0.692853}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -795,13 +795,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalRotation: {x: -0.3045088, y: -0.6485119, z: 0.6906461, w: -0.09856345}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 72.904, y: -95.189, z: 118.314}
 --- !u!1001 &749473932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1050,7 +1050,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.033277903, y: -1e-45, z: 0, w: 0.99944615}
+  m_LocalRotation: {x: 0.033277903, y: 0.00000003059072, z: -0.0000000010185591, w: 0.99944615}
   m_LocalPosition: {x: -0.233, y: 2.12, z: -2.373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1547,6 +1547,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7377ac8a94fc54ab7a0fb1b5351b4e40, type: 3}
+--- !u!137 &1264441094 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700004, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
+  m_PrefabInstance: {fileID: 156380844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1309102997 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700000, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
+  m_PrefabInstance: {fileID: 156380844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1350004955
 GameObject:
   m_ObjectHideFlags: 3
@@ -1823,6 +1833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140ee742d98a744e9bbb0a193abc40a3, type: 3}
+--- !u!23 &1719269513 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: fb8b8a16fd3ec410a89c2880b5e18f47, type: 3}
+  m_PrefabInstance: {fileID: 1031907222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1742224996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1920,6 +1935,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400046, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
   m_PrefabInstance: {fileID: 156380844}
   m_PrefabAsset: {fileID: 0}
+--- !u!205 &1801010080
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801010076}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.13845524, y: 0.9419898, z: 0.22868247}
+  m_Size: 2.119943
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6920901
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1309102997}
+    - renderer: {fileID: 1719269513}
+  - screenRelativeHeight: 0.50160027
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1264441094}
+    - renderer: {fileID: 1719269513}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1806727142}
+    - renderer: {fileID: 1719269513}
+  m_Enabled: 1
 --- !u!82 &1801010081
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2016,6 +2061,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!137 &1806727142 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700002, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
+  m_PrefabInstance: {fileID: 156380844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971635558
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class FireCtrl : MonoBehaviour
     public AudioSource audio;
     public AudioClip fireSfx;
 
+    public Renderer muzzleFlash;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
