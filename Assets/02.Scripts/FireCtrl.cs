@@ -37,6 +37,11 @@ public class FireCtrl : MonoBehaviour
     //코루틴 (서브 루틴) 
     IEnumerator ShowMuzzleFlash()
     {
+        //텍스처의 오프셋 값을 변경
+        // (0.0 ~ 0.5)
+        Vector2 offset = new Vector2(Random.Range(0,2), Random.Range(0,2)) * 0.5f;
+        muzzleFlash.material.mainTextureOffset = offset;
+
         muzzleFlash.enabled = true;
         
         yield return new WaitForSeconds(0.3f);
