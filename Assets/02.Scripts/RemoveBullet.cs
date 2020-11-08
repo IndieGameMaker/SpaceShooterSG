@@ -21,8 +21,8 @@ public class RemoveBullet : MonoBehaviour
             //오일러회전을 할 경우 짐벌락(김벌락 , Gimbal Lock) 현상
             Quaternion rot = Quaternion.LookRotation(normal);
 
-            Instantiate(sparkEffect, point, rot);
-
+            GameObject spark = Instantiate(sparkEffect, point, rot);
+            Destroy(spark, 0.4f);
             Destroy(coll.gameObject);
         }
     }
