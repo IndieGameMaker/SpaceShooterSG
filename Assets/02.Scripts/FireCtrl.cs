@@ -12,7 +12,7 @@ public class FireCtrl : MonoBehaviour
 
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +20,9 @@ public class FireCtrl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            audio.PlayOneShot(fireSfx, 0.8f);
+            // audio.clip = fireSfx;
+            // audio.Play();
             //(생성할 객체, 위치, 회전)
             Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         }
