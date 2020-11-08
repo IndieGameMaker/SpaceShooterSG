@@ -8,6 +8,14 @@ public class BarrelCtrl : MonoBehaviour
     public GameObject expEffect;
     private int hitCount;
 
+    [SerializeField]
+    private MeshRenderer renderer;
+
+    void Start()
+    {
+        renderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.CompareTag("BULLET"))
