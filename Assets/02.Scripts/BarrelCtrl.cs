@@ -11,9 +11,14 @@ public class BarrelCtrl : MonoBehaviour
     [SerializeField]
     private MeshRenderer renderer;
 
+    public Texture[] textures;
+
     void Start()
     {
         renderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
+
+        int idx = Random.Range(0, textures.Length); //0,1,2
+        renderer.material.mainTexture = textures[idx];
     }
 
     void OnCollisionEnter(Collision coll)
