@@ -28,7 +28,8 @@ public class BarrelCtrl : MonoBehaviour
 
         //폭발효과
         Quaternion rot = Quaternion.Euler(0, Random.Range(0, 360), 0);
-        Instantiate(expEffect, this.transform.position, rot);
+        var effect = Instantiate(expEffect, this.transform.position, rot);
+        Destroy(effect, 5.2f);
     }
 
 }
