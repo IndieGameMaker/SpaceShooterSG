@@ -15,13 +15,13 @@ public class PlayerCtrl : MonoBehaviour
     private float initHp = 100.0f;
     private float currHp = 100.0f;
 
-    private GameManager gameMgr;
+    //private GameManager gameMgr;
 
     void Start()
     {
         anim = GetComponent<Animation>();
         anim.Play("Idle");
-        gameMgr = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //gameMgr = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
@@ -82,7 +82,8 @@ public class PlayerCtrl : MonoBehaviour
 
     void PlayerDie()
     {
-        gameMgr.isGameOver = true;
+        GameManager.instance.isGameOver = true;
+        //gameMgr.isGameOver = true;
 
         //Debug.Log("Player Die !!!");
         //MONSTER TAG 객체를 검색

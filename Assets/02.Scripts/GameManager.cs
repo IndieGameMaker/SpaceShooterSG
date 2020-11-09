@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //싱글톤 , 싱글턴 (Sington Design Pattern)
+    public static GameManager instance = null;
+
     public GameObject monsterPrefab;
     public Transform[] points;
     public float createTime = 3.0f;
 
     public bool isGameOver = false;
     
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
