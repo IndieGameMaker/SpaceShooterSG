@@ -126,5 +126,7 @@ public class MonsterCtrl : MonoBehaviour
 
         StopAllCoroutines();
         agent.isStopped = true;
+
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 }
