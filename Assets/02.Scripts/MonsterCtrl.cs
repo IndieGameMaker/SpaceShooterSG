@@ -27,6 +27,8 @@ public class MonsterCtrl : MonoBehaviour
     private int hashIsAttack = Animator.StringToHash("isAttack");
     private int hashHit = Animator.StringToHash("Hit");
 
+    public float hp = 100.0f;
+
     void Start()
     {
         monsterTr = GetComponent<Transform>();
@@ -107,6 +109,17 @@ public class MonsterCtrl : MonoBehaviour
         {
             Destroy(coll.gameObject);
             anim.SetTrigger(hashHit);
+
+            hp -= 20.0f;
+            if (hp <= 0.0f)
+            {
+                MonsterDie();
+            }
         }
+    }
+
+    void MonsterDie()
+    {
+        
     }
 }
