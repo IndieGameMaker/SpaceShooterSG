@@ -812,7 +812,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0784e3c3201664a7f9c9a2ffe889f663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  traceDist: 10
+  attacDist: 2
   playerTr: {fileID: 0}
+  isDie: 0
 --- !u!195 &661176113
 NavMeshAgent:
   m_ObjectHideFlags: 0
