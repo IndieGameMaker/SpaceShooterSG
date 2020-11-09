@@ -66,7 +66,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.CompareTag("PUNCH"))
+        if (currHp > 0 && coll.CompareTag("PUNCH"))
         {
            //Debug.Log(coll.gameObject.name); 
            currHp -= 10.0f;
@@ -79,7 +79,13 @@ public class PlayerCtrl : MonoBehaviour
 
     void PlayerDie()
     {
-        Debug.Log("Player Die !!!");
+        //Debug.Log("Player Die !!!");
+        //MONSTER TAG 객체를 검색
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("MONSTER");
+        foreach (GameObject monster in monsters)
+        {
+            monster.GetComponent<MonsterCtrl>().MonsterWin();
+        }
     }
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
