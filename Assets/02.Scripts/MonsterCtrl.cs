@@ -25,6 +25,7 @@ public class MonsterCtrl : MonoBehaviour
     private NavMeshAgent agent;
     public bool isDie = false;
     private int hashIsAttack = Animator.StringToHash("isAttack");
+    private int hashHit = Animator.StringToHash("Hit");
 
     void Start()
     {
