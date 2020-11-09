@@ -28,9 +28,9 @@ public class FireCtrl : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
-            if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f))
+            if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f, 1<<8)) //2^8 = 256
             {
-               Debug.Log(hit.collider.name); 
+                Debug.Log(hit.collider.name);
             }
         }
     }
