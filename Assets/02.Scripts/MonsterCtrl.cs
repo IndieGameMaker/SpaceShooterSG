@@ -5,6 +5,16 @@ using UnityEngine.AI;
 
 public class MonsterCtrl : MonoBehaviour
 {
+    public enum STATE
+    {
+        IDLE,
+        TRACE,
+        ATTACK,
+        DIE
+    }
+
+    public STATE state = STATE.IDLE;
+
     [HideInInspector]
     public Transform playerTr;
     private NavMeshAgent agent;
