@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterCtrl : MonoBehaviour
 {
+    [HideInInspector]
     public Transform playerTr;
+    private NavMeshAgent agent;
 
     void Start()
     {
