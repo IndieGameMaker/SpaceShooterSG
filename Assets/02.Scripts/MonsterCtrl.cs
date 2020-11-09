@@ -64,6 +64,28 @@ public class MonsterCtrl : MonoBehaviour
 
 
     //몬스터의 상태에 따라서 행동을 처리하는 코루틴
-    
+    IEnumerator MonsterAction()
+    {
+        while (!isDie)
+        {
+            switch (state)
+            {
+                case STATE.IDLE: 
+                    agent.isStopped = true;
+                    break;
+
+                case STATE.TRACE: 
+                    agent.SetDestination(playerTr.position);
+                    agent.isStopped = false;
+                    break;
+
+                case STATE.ATTACK: break;
+
+                case STATE.DIE: break;                            
+            }
+
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 
 }
