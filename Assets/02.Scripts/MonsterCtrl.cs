@@ -16,11 +16,13 @@ public class MonsterCtrl : MonoBehaviour
         {
             playerTr = player.GetComponent<Transform>();
         }
+
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        agent.SetDestination(playerTr.position);
     }
 }
