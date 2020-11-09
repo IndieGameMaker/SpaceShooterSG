@@ -62,6 +62,14 @@ public class PlayerCtrl : MonoBehaviour
     }
 
 
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.CompareTag("PUNCH"))
+        {
+           Debug.Log(coll.gameObject.name); 
+        }
+    }
+
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
         Vector3.forward = Vector3(0, 0, 1)
         Vector3.up      = Vector3(0, 1, 0)
