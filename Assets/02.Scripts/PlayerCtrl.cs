@@ -79,6 +79,8 @@ public class PlayerCtrl : MonoBehaviour
 
     void PlayerDie()
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>().isGameOver = true;
+
         //Debug.Log("Player Die !!!");
         //MONSTER TAG 객체를 검색
         GameObject[] monsters = GameObject.FindGameObjectsWithTag("MONSTER");
