@@ -120,6 +120,6 @@ public class MonsterCtrl : MonoBehaviour
 
     void MonsterDie()
     {
-        
+        Debug.Log("Monster Die !!!");
     }
 }
