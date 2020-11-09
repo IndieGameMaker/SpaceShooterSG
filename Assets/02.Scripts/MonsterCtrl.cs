@@ -14,13 +14,18 @@ public class MonsterCtrl : MonoBehaviour
     }
 
     public STATE state = STATE.IDLE;
+    public float traceDist = 10.0f; //추적사정 거리
+    public float attacDist = 2.0f;  //공격사정 거리
 
     [HideInInspector]
     public Transform playerTr;
+    private Transform monsterTr;
+
     private NavMeshAgent agent;
 
     void Start()
     {
+        monsterTr = GetComponent<Transform>();
         GameObject player = GameObject.FindGameObjectWithTag("PLAYER");
         if (player != null)
         {
