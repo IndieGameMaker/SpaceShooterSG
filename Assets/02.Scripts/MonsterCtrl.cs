@@ -24,6 +24,7 @@ public class MonsterCtrl : MonoBehaviour
 
     private NavMeshAgent agent;
     public bool isDie = false;
+    private int hashIsAttack = Animator.StringToHash("isAttack");
 
     void Start()
     {
@@ -82,9 +83,14 @@ public class MonsterCtrl : MonoBehaviour
                     agent.SetDestination(playerTr.position);
                     agent.isStopped = false;
                     anim.SetBool("isTrace", true);
+                    anim.SetBool(hashIsAttack, false);
                     break;
 
-                case STATE.ATTACK: break;
+                case STATE.ATTACK: 
+                    // Hashtable
+                    // Key , Value
+                    anim.SetBool(hashIsAttack, true);
+                    break;
 
                 case STATE.DIE: break;                            
             }
