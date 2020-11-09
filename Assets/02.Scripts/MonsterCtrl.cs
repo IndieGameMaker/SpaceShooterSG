@@ -75,11 +75,13 @@ public class MonsterCtrl : MonoBehaviour
             {
                 case STATE.IDLE: 
                     agent.isStopped = true;
+                    anim.SetBool("isTrace", false);
                     break;
 
                 case STATE.TRACE: 
                     agent.SetDestination(playerTr.position);
                     agent.isStopped = false;
+                    anim.SetBool("isTrace", true);
                     break;
 
                 case STATE.ATTACK: break;
