@@ -22,6 +22,7 @@ public class MonsterCtrl : MonoBehaviour
     private Transform monsterTr;
 
     private NavMeshAgent agent;
+    public bool isDie = false;
 
     void Start()
     {
@@ -35,9 +36,32 @@ public class MonsterCtrl : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    //몬스터의 상태를 체크하는 코루틴
+    IEnumerator CheckMonsterState()
     {
-        agent.SetDestination(playerTr.position);
+        while (!isDie)
+        {
+            //몬스터와 주인공 간의 거리를 계산
+            float dist = Vector3.Distance(playerTr.position, monsterTr.position);
+            if (dist <= attacDist) //공격사정거리 이내의 거리
+            {
+                state = STATE.ATTACK;
+            }
+            else if (dist <= traceDist) //추적사정거리 이내
+            {
+                state = STATE.TRACE;
+            }
+            else
+            {
+                state = STATE.IDLE;
+            }
+
+            yield return new WaitForSeconds(0.3f);
+        }
     }
+
+
+    //몬스터의 상태에 따라서 행동을 처리하는 코루틴
+    
+
 }
