@@ -129,4 +129,11 @@ public class MonsterCtrl : MonoBehaviour
 
         GetComponent<CapsuleCollider>().enabled = false;
     }
+
+    public void MonsterWin()
+    {
+        StopAllCoroutines();
+        agent.isStopped = true;
+        anim.SetTrigger("PlayerDie");
+    }
 }
