@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject monsterPrefab;
+    public Transform[] points;
+    
     void Start()
     {
-        
+        points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
     }
 
     // Update is called once per frame
