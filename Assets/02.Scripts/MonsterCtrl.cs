@@ -20,6 +20,7 @@ public class MonsterCtrl : MonoBehaviour
     [HideInInspector]
     public Transform playerTr;
     private Transform monsterTr;
+    private Animator anim;
 
     private NavMeshAgent agent;
     public bool isDie = false;
@@ -27,6 +28,7 @@ public class MonsterCtrl : MonoBehaviour
     void Start()
     {
         monsterTr = GetComponent<Transform>();
+        anim      = GetComponent<Animator>();
         GameObject player = GameObject.FindGameObjectWithTag("PLAYER");
         if (player != null)
         {
