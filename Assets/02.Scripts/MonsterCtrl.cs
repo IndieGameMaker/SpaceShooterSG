@@ -26,6 +26,7 @@ public class MonsterCtrl : MonoBehaviour
     public bool isDie = false;
     private int hashIsAttack = Animator.StringToHash("isAttack");
     private int hashHit = Animator.StringToHash("Hit");
+    private int hashDie = Animator.StringToHash("Die");
 
     public float hp = 100.0f;
 
@@ -121,5 +122,9 @@ public class MonsterCtrl : MonoBehaviour
     void MonsterDie()
     {
         Debug.Log("Monster Die !!!");
+        anim.SetTrigger(hashDie);
+
+        StopAllCoroutines();
+        agent.isStopped = true;
     }
 }

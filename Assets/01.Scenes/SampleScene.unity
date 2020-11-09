@@ -817,6 +817,7 @@ MonoBehaviour:
   attacDist: 2
   playerTr: {fileID: 0}
   isDie: 0
+  hp: 100
 --- !u!195 &661176113
 NavMeshAgent:
   m_ObjectHideFlags: 0
