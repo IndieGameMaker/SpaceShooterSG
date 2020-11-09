@@ -24,13 +24,16 @@ public class FireCtrl : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
+
+            Debug.DrawRay(firePos.position, firePos.forward * 10.0f, Color.green);
+
         }
     }
     
     void Fire()
     {
         audio.PlayOneShot(fireSfx, 0.8f);
-        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        //Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         StartCoroutine(ShowMuzzleFlash());
     }
 
