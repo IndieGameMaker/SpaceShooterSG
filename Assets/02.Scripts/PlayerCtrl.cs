@@ -12,6 +12,8 @@ public class PlayerCtrl : MonoBehaviour
     public float turnSpeed = 80.0f;
 
     private Animation anim;
+    private float initHp = 100.0f;
+    private float currHp = 100.0f;
 
     void Start()
     {
@@ -66,8 +68,18 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (coll.CompareTag("PUNCH"))
         {
-           Debug.Log(coll.gameObject.name); 
+           //Debug.Log(coll.gameObject.name); 
+           currHp -= 10.0f;
+           if (currHp <= 0.0f)
+           {
+               PlayerDie();
+           }
         }
+    }
+
+    void PlayerDie()
+    {
+        Debug.Log("Player Die !!!");
     }
 
     /* 정규화 벡터(Normalized Vector), 단위 벡터(Unit Vector)
