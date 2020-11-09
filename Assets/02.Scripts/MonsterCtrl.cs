@@ -109,13 +109,6 @@ public class MonsterCtrl : MonoBehaviour
         if (coll.collider.CompareTag("BULLET"))
         {
             Destroy(coll.gameObject);
-            anim.SetTrigger(hashHit);
-
-            hp -= 20.0f;
-            if (hp <= 0.0f)
-            {
-                MonsterDie();
-            }
         }
     }
 
@@ -135,5 +128,16 @@ public class MonsterCtrl : MonoBehaviour
         StopAllCoroutines();
         agent.isStopped = true;
         anim.SetTrigger("PlayerDie");
+    }
+
+    public void OnDamage(Vector3 pos)
+    {
+        anim.SetTrigger(hashHit);
+
+        hp -= 20.0f;
+        if (hp <= 0.0f)
+        {
+            MonsterDie();
+        }
     }
 }

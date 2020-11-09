@@ -30,7 +30,8 @@ public class FireCtrl : MonoBehaviour
             Fire();
             if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f, 1<<8)) //2^8 = 256
             {
-                Debug.Log(hit.collider.name);
+                //Debug.Log(hit.collider.name);
+                hit.collider.GetComponent<MonsterCtrl>().OnDamage(hit.point);
             }
         }
     }
@@ -38,7 +39,7 @@ public class FireCtrl : MonoBehaviour
     void Fire()
     {
         audio.PlayOneShot(fireSfx, 0.8f);
-        //Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         StartCoroutine(ShowMuzzleFlash());
     }
 
